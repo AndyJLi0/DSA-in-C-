@@ -5,20 +5,24 @@
 #include <random>
 using namespace std;
 
-class SortingMethods {
+namespace sorting
+{
+    class SortingMethods
+    {
 
-    void selectionSort(vector<int>& arr);
+        void selectionSort(vector<int> &arr);
 
-    void insertionSort(vector<int>& arr);
+        void insertionSort(vector<int> &arr);
 
-    /**
-     * Helper functions
-    */
-    int indexOfMin(vector<int>& arr, int a);
+        /**
+         * Helper functions
+         */
+        int indexOfMin(vector<int> &arr, int a);
 
-    void slide(vector<int>& arr, int p);
+        void slide(vector<int> &arr, int p);
 
-    vector<int> generateRandomVector(int n);
-};
+        vector<int> generateRandomVector(int n);
+    };
+}
 
 #endif
