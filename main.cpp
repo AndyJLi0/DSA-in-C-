@@ -2,21 +2,21 @@
 #include <iostream>
 #include <string>
 #include <chrono>
+#include <iomanip>
 
 using namespace std;
 using namespace std::chrono;
 
 int main()
 {
-    int n = 10000; // For example, generate a vector of size 10,000
+    int n = 50000;
     std::vector<int> arr = generateRandomVector(n);
 
-    auto start = high_resolution_clock::now(); // Start timing
-    insertionSort(arr);                        // Call your sorting function
-    auto stop = high_resolution_clock::now();  // Stop timing
+    auto start = high_resolution_clock::now();
+    insertionSort(arr); // SORTING ALGORITHM HERE
+    auto stop = high_resolution_clock::now();
 
-    auto duration = duration_cast<microseconds>(stop - start);
-
+    duration<double> elapsed = stop - start;
     cout << "first 10 elements: \n";
     for (int i = 0; i < 10; i++)
     {
@@ -24,8 +24,7 @@ int main()
     }
 
     cout << "\n"
-         << "Time taken to sort: "
-         << duration.count() << " microseconds" << endl;
+         << "time taken: " << fixed << setprecision(2) << elapsed.count() << " s" << endl;
 
     return 0;
 }
