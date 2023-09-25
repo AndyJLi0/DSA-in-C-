@@ -10,13 +10,14 @@ using namespace std::chrono;
 int main()
 {
     int n = 50000;
-    std::vector<int> arr = generateRandomVector(n);
+    vector<int> arr = generateRandomVector(n);
 
     auto start = high_resolution_clock::now();
-    insertionSort(arr); // SORTING ALGORITHM HERE
+    selectionSort(arr); // SORTING ALGORITHM HERE
     auto stop = high_resolution_clock::now();
 
     duration<double> elapsed = stop - start;
+    
     cout << "first 10 elements: \n";
     for (int i = 0; i < 10; i++)
     {

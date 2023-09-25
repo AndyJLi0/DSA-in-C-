@@ -4,11 +4,11 @@ using namespace std;
 
 vector<int> generateRandomVector(int n)
 {
-    std::random_device rd;                           // Obtain a random number from hardware
-    std::mt19937 gen(rd());                          // Seed the generator
-    std::uniform_int_distribution<> distrib(1, 100); // Define the range
+    random_device rd;                           // Obtain a random number from hardware
+    mt19937 gen(rd());                          // Seed the generator
+    uniform_int_distribution<> distrib(1, 100); // Define the range
 
-    std::vector<int> vec(n);
+    vector<int> vec(n);
     for (int i = 0; i < n; ++i)
     {
         vec[i] = distrib(gen);
