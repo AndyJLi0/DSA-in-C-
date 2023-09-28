@@ -1,4 +1,5 @@
 #include "SortingMethods.cpp"
+#include "Stack.hpp"
 #include <iostream>
 #include <string>
 #include <chrono>

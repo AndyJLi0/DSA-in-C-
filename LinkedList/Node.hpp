@@ -11,7 +11,7 @@ namespace LinkedList
 
         NodeSingle(ValueType ndata, NodeSingle *nx = nullptr) : data(ndata), next(nx) {}
 
-        //TODO: Implement constructor and ability to change data
+        // TODO: Implement constructor and ability to change data
     };
 
     template <class ValueType>

@@ -4,25 +4,39 @@
 
 namespace LinkedList
 {
-
     template <class ValueType>
     class LinkedListSingle
     {
     private:
         NodeSingle<ValueType> *head;
-
         int length;
 
     public:
-        LinkedListSingle() : head(nullptr), length(0) {}
+        LinkedListSingle();
         ~LinkedListSingle();
 
-        void append(NodeSingle *node)
+        void append(NodeSingle<ValueType> *node)
         {
-            //TODO: implement append for single node
-    
+            // ... your append implementation
         }
     };
 
-    //TODO: implement linkedlist double
+    template <class ValueType>
+    LinkedListSingle<ValueType>::LinkedListSingle() : head(nullptr), length(0) {}
+
+    template <class ValueType>
+    LinkedListSingle<ValueType>::~LinkedListSingle()
+    {
+        NodeSingle<ValueType> *current = head;
+        NodeSingle<ValueType> *next = nullptr;
+
+        while (current != nullptr)
+        {
+            next = current->next;
+            delete current;
+            current = next;
+        }
+    }
+
+    // TODO: implement LinkedListDouble
 }
